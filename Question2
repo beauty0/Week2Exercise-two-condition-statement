@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week2Exercises2
+{
+    class Exercise2_2
+    {
+        static void Main()
+        {
+            //declaration of variables
+            double weightPackage1, weightPackage2, weightPerEuro1, weightPerEuro2;
+            decimal pricePackage1, pricePackage2;
+
+            //prompt the user for weight and price for package1
+            Console.WriteLine("Enter weight for package1 in kilograms");
+            weightPackage1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter price for package1 in euros");
+            pricePackage1 = decimal.Parse(Console.ReadLine());
+
+            //prompt the user for weight and price for package2
+            Console.WriteLine("Enter weight for package2 in kilograms");
+            weightPackage2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter price for package2 in euros");
+            pricePackage2 = decimal.Parse(Console.ReadLine());
+
+            weightPerEuro1 = weightPackage1 / (double)pricePackage1;
+            weightPerEuro2 = weightPackage2 / (double)pricePackage2;
+
+            if (weightPerEuro1 > weightPerEuro2)
+            {
+                Console.WriteLine("Package1 has better price");
+            }
+            else if (weightPerEuro2 > weightPerEuro1)
+            {
+                Console.WriteLine("Package2 has better price");
+            }
+            else
+            {
+                Console.WriteLine("Both have same price. Go for better quality");
+            }
+            Console.ReadLine();
+        }
+    }
+}
