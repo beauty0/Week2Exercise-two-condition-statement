@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week2Exercises2
+{
+    class Exercise2_1
+    {
+        static void Main(string[] args)
+        {
+            //declaration of variables
+            int number;
+            //prompt the user for number
+            Console.WriteLine("Enter number");
+
+            //read number from the keyboard and parse it to int
+            number = int.Parse(Console.ReadLine());
+            
+            //check the valid range
+            if (number >= 0 && number <= 1000)
+            {
+                //checking if the number is even
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("The number you entered is even");
+                }
+                else
+                {
+                    Console.WriteLine("The number you entered is odd");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You entered an invalid number");
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}
