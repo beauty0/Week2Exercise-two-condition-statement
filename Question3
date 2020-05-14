@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week2Exercises2
+{
+    class Exercise2_3
+    {
+        static void Main()
+        {
+            //declaration of variables
+            double a, b, c, perimeter;
+
+            //prompt for the values of a, b and c
+            Console.WriteLine("Enter length of edge a");
+            a = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter length of edge b");
+            b = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter length of edge c");
+            c = double.Parse(Console.ReadLine());
+
+            //checking the condition
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                //calculating perimeter
+                perimeter = a + b + c;
+
+                //displaying perimeter
+                Console.WriteLine("Perimeter is {0:0.00}", perimeter);
+            }
+            else
+            {
+                //displaying invalid input
+                Console.WriteLine("Invalid input");
+            }
+            Console.ReadLine();
+        }
+    }
+}
