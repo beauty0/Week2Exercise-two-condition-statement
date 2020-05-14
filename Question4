@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week2Exercises2
+{
+    class Exercise2_4
+    {
+        static void Main()
+        {
+            //declaration of variables
+            int secretNum, guess;
+            
+            //creating object of Random class
+            Random random = new Random();
+            //creating a random number and assigning it to secretNum
+            secretNum = random.Next(0,21);
+
+            //promt the user to guess the number
+            Console.WriteLine("Guess the secret number between 0 and 20");
+            guess = int.Parse(Console.ReadLine());
+
+           // if guess is less than the secret number
+            if (guess < secretNum)
+            {
+                Console.WriteLine("Your guess is too low");
+            }
+            // if guess is greater than the secret number
+            else if (guess > secretNum)
+            {
+                Console.WriteLine("Your guess is too high");
+            }
+            //if both are equal
+            else
+            {
+                Console.WriteLine("Well done, you guessed correctly");
+            }
+           //displaying the secret number
+            Console.WriteLine("Secret number is {0}", secretNum);
+            
+            Console.ReadLine();
+        }
+    }
+}
